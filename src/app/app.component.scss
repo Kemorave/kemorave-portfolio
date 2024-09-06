@@ -1,0 +1,5 @@
+@import "variables.scss";
+
+.show-up-animation {
+  animation: show-up 30s $intro-duration backwards;
+}
