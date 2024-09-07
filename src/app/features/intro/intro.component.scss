@@ -1,13 +1,14 @@
 @import "variables.scss";
 .intro-animation {
-  animation: open $intro-duration 1s backwards cubic-bezier(0, 0.885, 0.90, 1.275);
+  animation: open $intro-duration 1s backwards
+    cubic-bezier(0, 0.885, 0.9, 1.275);
 }
 .show-up-animation {
   animation: show-up 3s calc($intro-duration / 2) backwards;
 }
 .hide-intro {
-  animation: fade-away 3s $intro-duration forwards;
+  animation: fade-away 3s calc($intro-duration + 3s) forwards;
 }
 .flash {
-  animation: flash-effect 500ms $intro-duration both;
+  animation: flash-effect 500ms calc($intro-duration + 3s) both;
 }

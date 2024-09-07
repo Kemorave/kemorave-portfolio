@@ -80,10 +80,7 @@ export class AppComponent implements OnInit {
   constructor(private readonly ngParticlesService: NgParticlesService) {}
 
   ngOnInit(): void {
-    setTimeout(() => {
-      var audio = new Audio('twitter.mp3');
-      audio.play();
-    }, 1000);
+     
     this.ngParticlesService.init(async (engine) => {
       console.log(engine);
 

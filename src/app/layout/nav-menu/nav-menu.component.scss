@@ -1,0 +1,19 @@
+@use "variables.scss" as *;
+
+li {
+  //animation: show-up 10s calc($intro-duration * 2) both;
+  @apply text-white font-light text-6xl hover:scale-110 scale-100 cursor-pointer duration-700 transition-all;
+}
+.nav-menu {
+  @apply bg-black;
+}
+@keyframes start-explode {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

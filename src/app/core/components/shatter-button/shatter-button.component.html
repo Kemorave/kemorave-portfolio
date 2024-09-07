@@ -1,0 +1,12 @@
+<div
+  [ngStyle]="{ 'width.px': size, 'height.px': size / 2 }"
+  class="relative overflow-clip bg-black   flex"
+>
+  <app-shatter-element (onShatter)="clicked()"> </app-shatter-element>
+  <p
+    style="mix-blend-mode: difference; filter: invert(1)"
+    class="bg-transparent text-center text-black font-[rolemodel] font-extrabold text-3xl pointer-events-none m-auto"
+  >
+    {{ title }}
+  </p>
+</div>

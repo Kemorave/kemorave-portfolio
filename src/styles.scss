@@ -1,7 +1,24 @@
+@font-face {
+  src: url("/fonts/Goldroom D/Goldroom D.otf");
+  font-family: goldroom;
+}
+@font-face {
+  src: url("/fonts/thegodfather/TheGodfather-v2.ttf");
+  font-family: godfather;
+}
+@font-face {
+  src: url("/fonts/demode/Demode.ttf");
+  font-family: demode;
+}
+@font-face {
+  src: url("/fonts/role-model-personal-use/RoleModel-PersonalUse-Regular.otf");
+  font-family: rolemodel;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- @keyframes flash-effect {
+
+@keyframes flash-effect {
   0% {
     opacity: 0;
   }
@@ -49,4 +66,31 @@
   100% {
     opacity: 0;
   }
+}
+body{
+  background-color:  black;
+}
+#info {
+  color: white;
+  font-family: monospace;
+}
+
+.fragment-canvas {
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+
+.canvas-draw {
+  overflow: hidden;
+  position: absolute;
+  width: 768px;
+  height: 485px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
