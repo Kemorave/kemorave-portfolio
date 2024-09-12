@@ -1,7 +1,8 @@
-<div class="relative overflow-clip  ">
-  <div class="absolute z-0 bg-red-500 size-full">
-    <app-shatter-element class="z-10"> </app-shatter-element>
+<div class="relative overflow-clip">
+  <div class="absolute z-0 size-full">
+    <app-shatter-element> </app-shatter-element>
   </div>
-
-  <ng-content class="size-full z-50 absolute"></ng-content>
+  <div class="size-full bg-slate-500 z-50">
+    <ng-content></ng-content>
+  </div>
 </div>

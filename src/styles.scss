@@ -96,6 +96,7 @@ body {
 }
 
 .canvas-draw {
+  z-index: 0;
   overflow: hidden;
   position: absolute;
   width: 768px;
