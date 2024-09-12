@@ -1,8 +1,10 @@
 @use "variables.scss" as *;
 
-li {
-  //animation: show-up 10s calc($intro-duration * 2) both;
+li { 
   @apply text-white font-light text-6xl hover:scale-110 scale-100 cursor-pointer duration-700 transition-all;
+}
+nav {
+  animation: show-up 10s calc($intro-duration * 2) both; 
 }
 .nav-menu {
   @apply bg-black;

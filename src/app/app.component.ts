@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
           default: OutMode.bounce,
         },
         random: true,
-        speed: 1,
+        speed: 5,
         straight: true,
 
       },
@@ -64,7 +64,7 @@ export class AppComponent implements OnInit {
           
           decay: 0.03,
           count: 10,
-          speed: 0.5,
+          speed: 1.5,
         }
       },
       shape: {

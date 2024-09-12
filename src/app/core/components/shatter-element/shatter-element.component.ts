@@ -47,7 +47,7 @@ export class ShatterElementComponent implements OnInit, AfterViewInit {
 
     //if (++this.imageIndex === this.images.length) this.imageIndex = 0;
 
-    this._image.addEventListener('click', (a) => this.imageClickHandler(a));
+    this._image.addEventListener('mousedown', (a) => this.imageClickHandler(a));
     this._container?.appendChild(this._image);
 
     if (transitionIn) {
@@ -154,7 +154,9 @@ export class ShatterElementComponent implements OnInit, AfterViewInit {
     }
 
     this._container?.removeChild(this._image);
-    this._image.removeEventListener('click', (a) => this.imageClickHandler(a));
+    this._image.removeEventListener('mousedown', (a) =>
+      this.imageClickHandler(a)
+    );
   }
 
   shatterCompleteHandler(): void {

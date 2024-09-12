@@ -14,9 +14,21 @@
   src: url("/fonts/role-model-personal-use/RoleModel-PersonalUse-Regular.otf");
   font-family: rolemodel;
 }
+@import "./scss/fontawsome/css/fontawesome.css";
+@import "./scss/fontawsome/css/regular.css";
+@import "./scss/fontawsome/css/solid.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-white;
+}
 
 @keyframes flash-effect {
   0% {
@@ -67,8 +79,8 @@
     opacity: 0;
   }
 }
-body{
-  background-color:  black;
+body {
+  background-color: black;
 }
 #info {
   color: white;
