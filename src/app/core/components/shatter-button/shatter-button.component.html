@@ -1,10 +1,9 @@
 <div 
-  class="relative overflow-clip bg-black   px-3 py-1 flex"
+  class="relative flex px-3 py-1 bg-black overflow-clip"
 >
   <app-shatter-element (onShatter)="clicked()"> </app-shatter-element>
-  <p
-    style="mix-blend-mode: difference; filter: invert(1)"
-    class="bg-transparent text-center text-black font-[rolemodel] font-extrabold pointer-events-none m-auto"
+  <p 
+    class="shatter-invert-text text-center font-extrabold m-auto text-black"
   >
     {{ title }}
   </p>

@@ -1,8 +1,21 @@
-<section class="grid grid-cols-2">
-  <app-shatter-container class="w-52">
-    <div class="flex">
-      <i class="fa-solid fa-house text-red-400 text-5xl"></i>
-      <h1 class="text-black">HOME</h1>
-    </div>
-  </app-shatter-container>
+<section>
+  <h2 class="m-5 text-black">Projects</h2>
+  
+</section>
+<section class="size-full flex flex-col">
+  <h2 class="m-5 text-black">Where to find me</h2>
+  <div class="grid grid-cols-2 gap-5 m-5 self-center">
+    <app-shatter-container
+      (onShatter)="openLink(item.url)"
+      *ngFor="let item of whereToFindMeList"
+      class="w-[300px] h-[150px] rounded-md overflow-clip"
+    >
+      <div class="size-full flex p-1">
+        <div class="flex m-auto justify-between">
+          <fa-icon size="7x" [icon]="item.icon"></fa-icon>
+          <p class="my-auto ml-3 font-bold text-2xl">{{ item.text }}</p>
+        </div>
+      </div>
+    </app-shatter-container>
+  </div>
 </section>

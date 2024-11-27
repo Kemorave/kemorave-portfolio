@@ -1,12 +1,11 @@
 <ngx-particles
-  class="show-up-animation"
+  class="background-show-up-animation"
   [id]="id"
   [options]="particlesOptions"
 ></ngx-particles>
 <main class="relative h-dvh flex flex-col">
-  <app-nav-menu class="fixed w-full"></app-nav-menu>
   <div class="show-up-animation size-full mt-[50px]">
-    <router-outlet class=""></router-outlet>
+    <router-outlet></router-outlet>
   </div>
   <app-intro
     class="absolute pointer-events-none m-auto size-full start-0 end-0 left-0 right-0"

@@ -27,9 +27,13 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-white;
+  @apply text-white font-[rolemodel];
 }
-
+h2 {
+  mix-blend-mode: difference;
+  filter: invert(1);
+  @apply bg-transparent   font-[rolemodel] pointer-events-none font-bold text-2xl;
+}
 @keyframes flash-effect {
   0% {
     opacity: 0;
@@ -106,4 +110,10 @@ body {
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+.shatter-invert-text {
+  mix-blend-mode: difference;
+  filter: invert(1);
+  @apply bg-transparent   font-[rolemodel] pointer-events-none;
 }

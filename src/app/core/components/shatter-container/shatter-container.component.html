@@ -1,8 +1,9 @@
-<div class="relative overflow-clip">
-  <div class="absolute z-0 size-full">
-    <app-shatter-element> </app-shatter-element>
-  </div>
-  <div class="size-full bg-slate-500 z-50">
-    <ng-content></ng-content>
+<div class="relative bg-black size-full overflow-clip">
+  <app-shatter-element #shEle class="size-full absolute"> </app-shatter-element>
+
+  <div
+    class="z-50 shatter-invert-text text-black pointer-events-none bg-transparent size-full"
+  >
+    <ng-content class="size-full"></ng-content>
   </div>
 </div>
