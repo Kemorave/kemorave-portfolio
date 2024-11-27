@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
     imagesUrlList: string[],
     text: string,
     url: string,
-    url: string,
+    
   }[] = [
     
   ];
