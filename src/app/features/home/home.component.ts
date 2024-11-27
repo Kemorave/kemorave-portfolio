@@ -23,9 +23,10 @@ export class HomeComponent implements OnInit {
   faCloudscale = faCloudscale;
   faStackOverflow = faStackOverflow;
   projectsList: {
-    imagesUrlList: string[];
-    text: string;
-    url: string;
+    imagesUrlList: string[],
+    text: string,
+    url: string,
+    url: string,
   }[] = [
     
   ];
