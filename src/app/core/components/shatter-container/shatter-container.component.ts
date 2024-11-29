@@ -14,6 +14,5 @@ export class ShatterContainerComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.shatterElement.onShatter.subscribe(() => this.onShatter.emit());
   }
 }

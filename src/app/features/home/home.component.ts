@@ -14,7 +14,9 @@ import {
 })
 export class HomeComponent implements OnInit {
   openLink(link: string) {
-    window.open(link, '_blank');
+    setTimeout(() => {
+    window.open(link);
+    },1500);
   }
   audio = new Audio('twitter.mp3');
   constructor() {}
@@ -23,13 +25,10 @@ export class HomeComponent implements OnInit {
   faCloudscale = faCloudscale;
   faStackOverflow = faStackOverflow;
   projectsList: {
-    imagesUrlList: string[],
-    text: string,
-    url: string,
-    
-  }[] = [
-    
-  ];
+    imagesUrlList: string[];
+    text: string;
+    url: string;
+  }[] = [];
   whereToFindMeList: {
     icon: IconDefinition;
     text: string;
@@ -38,17 +37,17 @@ export class HomeComponent implements OnInit {
     {
       icon: faGithub,
       text: '@Kemorave',
-      url: 'https://github.com/Kemorave',
-    },
-    {
-      icon: faLinkedin,
-      text: '@Ibrahim',
-      url: 'https://www.linkedin.com/in/ibrahim-kemorave/',
+      url: 'https://github.com/Kemorave/',
     },
     {
       icon: faCloudscale,
       text: '@Kemorave',
-      url: 'https://cloudscale.ch',
+      url: 'https://www.frontendmentor.io/profile/Kemorave',
+    },
+    {
+      icon: faLinkedin,
+      text: '@Ibrahim',
+      url: 'https://www.linkedin.com/in/ibrahim-dirar-482270206/',
     },
   ];
   ngOnInit() {

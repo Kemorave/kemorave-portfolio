@@ -138,8 +138,8 @@ export class ShatterElementComponent implements OnInit, AfterViewInit {
 
       const tl1 = new gsap.core.Timeline();
 
-      tl1.to(fragment.canvas, 1.5, {
-        z:100,
+      tl1.to(fragment.canvas, 2.5, {
+        z:400,
         rotationX: rx,
         rotationY: ry,
         ease: Cubic.easeIn,
