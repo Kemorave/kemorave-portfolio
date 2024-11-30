@@ -37,7 +37,7 @@ export class ShatterElementComponent implements OnInit, AfterViewInit {
   _clickPosition!: number[];
   imagesLoaded(): void {
     // this.container?.removeChild(this.image);
-    this.placeImage(false);
+    this.placeImage(true);
     this.triangulate();
     //this.shatter();
   }
@@ -139,7 +139,7 @@ export class ShatterElementComponent implements OnInit, AfterViewInit {
       const tl1 = new gsap.core.Timeline();
 
       tl1.to(fragment.canvas, 2.5, {
-        z:400,
+        z: 200,
         rotationX: rx,
         rotationY: ry,
         ease: Cubic.easeIn,
@@ -160,13 +160,13 @@ export class ShatterElementComponent implements OnInit, AfterViewInit {
   }
 
   shatterCompleteHandler(): void {
+    this.loadImage();
     this._fragments.forEach((f) => {
       this._container?.removeChild(f.canvas);
     });
     this._fragments.length = 0;
     this._vertices.length = 0;
     this._indices.length = 0;
-    //this.placeImage();
   }
 
   randomRange(min: number, max: number): number {
@@ -191,7 +191,15 @@ export class ShatterElementComponent implements OnInit, AfterViewInit {
 
     this._clickPosition = [this._imageWidth * 0.5, this._imageHeight * 0.5];
     gsap.core.Tween.set(this._container, { perspective: 500 });
+    this.loadImage();
 
+    //   this.image.src = urls[0];
+  }
+  ngAfterViewInit(): void {
+    this.loaded();
+  }
+
+  loadImage() {
     this._image = new Image();
     this._image.src = this.src;
     this._image.style.objectFit = 'cover';
@@ -202,10 +210,6 @@ export class ShatterElementComponent implements OnInit, AfterViewInit {
       //   this.image.src = urls[i];
       // }
     };
-    //   this.image.src = urls[0];
-  }
-  ngAfterViewInit(): void {
-    this.loaded();
   }
 }
 

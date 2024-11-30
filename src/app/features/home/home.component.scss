@@ -1,0 +1,29 @@
+@import "variables.scss";
+@keyframes rotator {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(50deg); }
+    100% { transform: rotate(360deg); }
+}
+.rotating {
+    animation: rotator 10s  ease-in-out infinite alternate;
+
+}
+@keyframes toFullSize {
+        0%{height: 0%; }
+        50% {  height: 40%; }
+        100% {  height: 100%; }
+
+}
+.to-full-size {
+    animation: toFullSize 3s calc($intro-duration * 3)  ease-in  alternate;
+}
+@keyframes toZeroSize {
+       0%{height: 100%; }
+        50% {  height: 60%; }
+        100% {  height: 0%; }
+
+}
+.to-zero-size {
+    animation: toZeroSize 3s calc($intro-duration * 3) ease-in  alternate;
+}
+

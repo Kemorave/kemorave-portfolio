@@ -7,7 +7,7 @@
   animation: show-up 3s calc($intro-duration / 2) backwards;
 }
 .hide-intro {
-  animation: fade-away 3s calc($intro-duration + 3s) forwards;
+  animation: fade-away 1s calc($intro-duration + 3s) forwards;
 }
 .flash {
   animation: flash-effect 500ms calc($intro-duration + 3s) both;

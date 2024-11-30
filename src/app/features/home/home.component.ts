@@ -10,7 +10,7 @@ import {
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
   openLink(link: string) {
@@ -36,17 +36,19 @@ export class HomeComponent implements OnInit {
   }[] = [
     {
       icon: faGithub,
-      text: '@Kemorave',
+      text: '\nGitHub\n@Kemorave',
+
       url: 'https://github.com/Kemorave/',
     },
     {
       icon: faCloudscale,
-      text: '@Kemorave',
+      text: '\nFrontend Mentor\n@Kemorave',
+
       url: 'https://www.frontendmentor.io/profile/Kemorave',
     },
     {
       icon: faLinkedin,
-      text: '@Ibrahim',
+      text: '\nLinkedin\n@Ibrahim-dirar',
       url: 'https://www.linkedin.com/in/ibrahim-dirar-482270206/',
     },
   ];

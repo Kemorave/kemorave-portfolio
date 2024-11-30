@@ -1,4 +1,18 @@
-<div class="size-auto">
+<div class="size-auto px-5">
+  <section class="grid late-show-up-animation grid-cols-2 relative px-2">
+   <div class="w-full relative flex  items-center">
+     <div class="bg-white absolute w-full to-zero-size "></div>
+     <p class="text-7xl m-5 shatter-invert-text uppercase font-bold text-black">
+      I make things happen with code.
+    </p>
+   </div>
+    <div class="w-full relative flex  items-center">
+      <div class="bg-white absolute size-full to-full-size"></div> 
+      <p class="uppercase m-5 text-8xl shatter-invert-text text-black">
+        Hi there
+      </p>
+    </div>
+  </section>
   <section>
     <h2 class="m-5 text-black">Projects</h2>
   </section>
@@ -10,11 +24,11 @@
       <app-shatter-container
         (onShatter)="openLink(item.url)"
         *ngFor="let item of whereToFindMeList"
-        class="md:w-[300px] h-[150px] transition-all duration-700  cursor-pointer w-full rounded-md overflow-clip"
+        class="md:w-[300px] h-[150px] hover:scale-105 transition-all duration-700 cursor-pointer w-full rounded-md overflow-clip"
       >
         <div class="flex p-5 w-full items-center justify-items-center">
           <fa-icon size="7x" [icon]="item.icon"></fa-icon>
-          <p class="ml-3 font-bold text-2xl">{{ item.text }}</p>
+          <p class="ml-3 font-bold text-2xl text-black">{{ item.text }}</p>
         </div>
       </app-shatter-container>
     </div>

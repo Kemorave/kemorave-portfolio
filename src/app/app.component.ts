@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
         distance: 200,
         enable: true,
         opacity: 0.3,
-        width: 5,
+        width: 10,
       },
       move: {
         direction: MoveDirection.bottom,

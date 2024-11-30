@@ -7,3 +7,8 @@
 .background-show-up-animation {
   animation: show-up 10s calc($intro-duration) backwards;
 }
+
+
+.late-show-up-animation {
+  animation: show-up 5s calc($intro-duration * 5) backwards;
+}
