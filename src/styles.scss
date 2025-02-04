@@ -1,21 +1,13 @@
 @font-face {
-  src: url("/fonts/Goldroom D/Goldroom D.otf");
-  font-family: goldroom;
+  src: url("/fonts/caviar/CaviarDreams.ttf");
+  font-family: caviardreams;
 }
+
 @font-face {
-  src: url("/fonts/thegodfather/TheGodfather-v2.ttf");
-  font-family: godfather;
+  src: url("/fonts/quick-sand/Quicksand-Regular.otf");
+  font-family: quicksand;
 }
-@font-face {
-  src: url("/fonts/demode/Demode.ttf");
-  font-family: demode;
-}
-@font-face {
-  src: url("/fonts/role-model-personal-use/RoleModel-PersonalUse-Regular.otf");
-  font-family: rolemodel;
-}
-@import "./scss/fontawsome/css/fontawesome.css";
-@import "./scss/fontawsome/css/regular.css";
+@import "./scss/fontawsome/css/fontawesome.css"; 
 @import "./scss/fontawsome/css/solid.css";
 @tailwind base;
 @tailwind components;
@@ -28,12 +20,16 @@ h4,
 h5,
 h6,
 p {
-  @apply text-white font-[rolemodel];
+  @apply text-white;
+}
+body {
+  background-color: black;
+  font-family: quicksand;
 }
 h2 {
   mix-blend-mode: difference;
   filter: invert(1);
-  @apply bg-transparent   font-[rolemodel] pointer-events-none font-bold text-2xl;
+  @apply bg-transparent   pointer-events-none font-bold text-2xl;
 }
 @keyframes flash-effect {
   0% {
@@ -84,12 +80,9 @@ h2 {
     opacity: 0;
   }
 }
-body {
-  background-color: black;
-}
+
 #info {
   color: white;
-  font-family: monospace;
 }
 
 .fragment-canvas {
@@ -116,5 +109,5 @@ body {
 .shatter-invert-text {
   mix-blend-mode: difference;
   filter: invert(1);
-  @apply bg-transparent   font-[rolemodel] pointer-events-none;
+  @apply bg-transparent     pointer-events-none;
 }

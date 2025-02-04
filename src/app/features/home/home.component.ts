@@ -7,6 +7,11 @@ import {
   faStackOverflow,
   IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
+import {
+  
+  faBoxOpen,
+  faExternalLink
+} from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,8 +20,8 @@ import {
 export class HomeComponent implements OnInit {
   openLink(link: string) {
     setTimeout(() => {
-    window.open(link);
-    },1500);
+      window.open(link);
+    }, 1500);
   }
   audio = new Audio('twitter.mp3');
   constructor() {}
@@ -24,6 +29,7 @@ export class HomeComponent implements OnInit {
   faLinkedinIn = faLinkedin;
   faCloudscale = faCloudscale;
   faStackOverflow = faStackOverflow;
+  faExternalLink = faExternalLink;
   projectsList: {
     imagesUrlList: string[];
     text: string;

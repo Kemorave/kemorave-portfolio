@@ -14,6 +14,7 @@ import { HomeComponent } from './features/home/home.component';
 import { ShatterElementComponent } from './core/components/shatter-element/shatter-element.component';
 import { ShatterButtonComponent } from './core/components/shatter-button/shatter-button.component';
 import { ShatterContainerComponent } from './core/components/shatter-container/shatter-container.component';
+import { ParallaxDirective } from './core/directives/parallax.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,7 @@ import { ShatterContainerComponent } from './core/components/shatter-container/s
     AppRoutingModule,
     FontAwesomeModule,
   ],
-  providers: [],
+  providers: [ParallaxDirective],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

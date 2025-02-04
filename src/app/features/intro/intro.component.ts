@@ -14,6 +14,6 @@ export class IntroComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.shCont.shatterElement.shatter();
-    }, 4000);
+    }, 1000);
   }
 }
