@@ -15,6 +15,7 @@ import { ShatterElementComponent } from './core/components/shatter-element/shatt
 import { ShatterButtonComponent } from './core/components/shatter-button/shatter-button.component';
 import { ShatterContainerComponent } from './core/components/shatter-container/shatter-container.component';
 import { ParallaxDirective } from './core/directives/parallax.directive';
+import { KemoraveDataService } from './core/services/kemorave-data.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,7 @@ import { ParallaxDirective } from './core/directives/parallax.directive';
     AppRoutingModule,
     FontAwesomeModule,
   ],
-  providers: [ParallaxDirective],
+  providers: [ParallaxDirective, KemoraveDataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

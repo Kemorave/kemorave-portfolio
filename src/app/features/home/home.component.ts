@@ -12,19 +12,16 @@ import {
   faBoxOpen,
   faExternalLink
 } from '@fortawesome/free-solid-svg-icons';
+import { KemoraveDataService, WizardLevel } from '../../core/services/kemorave-data.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  openLink(link: string) {
-    setTimeout(() => {
-      window.open(link);
-    }, 1500);
-  }
+  constructor(private dataService: KemoraveDataService) {}
+
   audio = new Audio('twitter.mp3');
-  constructor() {}
   faGithub = faGithub;
   faLinkedinIn = faLinkedin;
   faCloudscale = faCloudscale;
@@ -58,7 +55,15 @@ export class HomeComponent implements OnInit {
       url: 'https://www.linkedin.com/in/ibrahim-dirar-482270206/',
     },
   ];
+  currentLevel!: { years: number; level: WizardLevel };
   ngOnInit() {
     this.audio.load();
+
+    this.currentLevel = this.dataService.getMyLevel();
+  }
+  openLink(link: string) {
+    setTimeout(() => {
+      window.open(link);
+    }, 1500);
   }
 }

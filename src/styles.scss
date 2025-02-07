@@ -1,13 +1,14 @@
 @font-face {
-  src: url("/fonts/caviar/CaviarDreams.ttf");
-  font-family: caviardreams;
+  src: url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+  font-family: Cinzel, serif;
 }
-
-@font-face {
-  src: url("/fonts/quick-sand/Quicksand-Regular.otf");
-  font-family: quicksand;
+.rye-regular {
+  font-family: "Rye", serif;
+  font-weight: 400;
+  font-style: normal;
 }
-@import "./scss/fontawsome/css/fontawesome.css"; 
+ 
+@import "./scss/fontawsome/css/fontawesome.css";
 @import "./scss/fontawsome/css/solid.css";
 @tailwind base;
 @tailwind components;
@@ -24,7 +25,7 @@ p {
 }
 body {
   background-color: black;
-  font-family: quicksand;
+  font-family: Cinzel;
 }
 h2 {
   mix-blend-mode: difference;
