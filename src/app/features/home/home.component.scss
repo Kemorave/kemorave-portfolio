@@ -1,29 +1,117 @@
 @import "variables.scss";
 @keyframes rotator {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(50deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .rotating {
-    animation: rotator 10s  ease-in-out infinite alternate;
-
+  animation: rotator 10s ease-in-out infinite alternate;
 }
 @keyframes toFullSize {
-        0%{height: 0%; }
-        50% {  height: 40%; }
-        100% {  height: 100%; }
-
+  0% {
+    height: 0%;
+  }
+  50% {
+    height: 40%;
+  }
+  100% {
+    height: 100%;
+  }
 }
 .to-full-size {
-    animation: toFullSize 3s calc($intro-duration * 3)  ease-in  alternate;
+  animation: toFullSize 3s calc($intro-duration * 3) ease-in alternate;
 }
 @keyframes toZeroSize {
-       0%{height: 100%; }
-        50% {  height: 50%; }
-        100% {  height: 0%; }
-
+  0% {
+    height: 100%;
+  }
+  50% {
+    height: 50%;
+  }
+  100% {
+    height: 0%;
+  }
 }
 .to-zero-size {
-    animation: toZeroSize 3s calc($intro-duration * 3) ease-in-out  alternate;
+  animation: toZeroSize 3s calc($intro-duration * 3) ease-in-out alternate;
 }
 
+.flame-text {
+  animation: burn-text 1.5s linear infinite alternate;
+}
+
+.flame-pg {
+  animation: burn-pg 1.5s linear infinite alternate;
+}
+
+@keyframes burn-text {
+  from {
+    text-shadow: -0.1em 0 0.3em #fefcc9, 0.1em -0.1em 0.3em #feec85,
+      -0.2em -0.2em 0.4em #ffae34, 0.2em -0.3em 0.3em #ec760c,
+      -0.2em -0.4em 0.4em #cd4606, 0.1em -0.5em 0.7em #973716,
+      0.1em -0.7em 0.7em #451b0e;
+  }
+  45% {
+    text-shadow: 0.1em -0.2em 0.5em #fefcc9, 0.15em 0 0.4em #feec85,
+      -0.1em -0.25em 0.5em #ffae34, 0.15em -0.45em 0.5em #ec760c,
+      -0.1em -0.5em 0.6em #cd4606, 0 -0.8em 0.6em #973716,
+      0.2em -1em 0.8em #451b0e;
+  }
+  70% {
+    text-shadow: -0.1em 0 0.3em #fefcc9, 0.1em -0.1em 0.3em #feec85,
+      -0.2em -0.2em 0.6em #ffae34, 0.2em -0.3em 0.4em #ec760c,
+      -0.2em -0.4em 0.7em #cd4606, 0.1em -0.5em 0.7em #973716,
+      0.1em -0.7em 0.9em #451b0e;
+  }
+  to {
+    text-shadow: -0.1em -0.2em 0.6em #fefcc9, -0.15em 0 0.6em #feec85,
+      0.1em -0.25em 0.6em #ffae34, -0.15em -0.45em 0.5em #ec760c,
+      0.1em -0.5em 0.6em #cd4606, 0 -0.8em 0.6em #973716,
+      -0.2em -1em 0.8em #451b0e;
+  }
+}
+
+@keyframes burn-pg {
+  from {
+    box-shadow: -0.1em 0 0.3em #fefcc9, 0.1em -0.1em 0.3em #feec85,
+      -0.2em -0.2em 0.4em #ffae34, 0.2em -0.3em 0.3em #ec760c,
+      -0.2em -0.4em 0.4em #cd4606, 0.1em -0.5em 0.7em #973716,
+      0.1em -0.7em 0.7em #451b0e;
+  }
+  45% {
+    box-shadow: 0.1em -0.2em 0.5em #fefcc9, 0.15em 0 0.4em #feec85,
+      -0.1em -0.25em 0.5em #ffae34, 0.15em -0.45em 0.5em #ec760c,
+      -0.1em -0.5em 0.6em #cd4606, 0 -0.8em 0.6em #973716,
+      0.2em -1em 0.8em #451b0e;
+  }
+  70% {
+    box-shadow: -0.1em 0 0.3em #fefcc9, 0.1em -0.1em 0.3em #feec85,
+      -0.2em -0.2em 0.6em #ffae34, 0.2em -0.3em 0.4em #ec760c,
+      -0.2em -0.4em 0.7em #cd4606, 0.1em -0.5em 0.7em #973716,
+      0.1em -0.7em 0.9em #451b0e;
+  }
+  to {
+    box-shadow: -0.1em -0.2em 0.6em #fefcc9, -0.15em 0 0.6em #feec85,
+      0.1em -0.25em 0.6em #ffae34, -0.15em -0.45em 0.5em #ec760c,
+      0.1em -0.5em 0.6em #cd4606, 0 -0.8em 0.6em #973716,
+      -0.2em -1em 0.8em #451b0e;
+  }
+}
+.moving-bg {
+  object-fit: cover;
+  animation: shaking-img 4.5s linear infinite alternate;
+}
+@keyframes shaking-img {
+  from { 
+    transform: scale(1.07) translateY(-10px) translateX(-10px);
+  }
+  to { 
+    transform: scale(1.05) translateY(10px) translateX(-10px);
+  }
+}

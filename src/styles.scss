@@ -1,13 +1,17 @@
 @font-face {
-  src: url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
-  font-family: Cinzel, serif;
+  src: url("/fonts/quick-sand/Quicksand-Regular.otf");
+  font-family: quicksand;
+}
+@font-face {
+  src: url("/fonts/knights/Kingthings_Calligraphica_2.ttf");
+  font-family: Kingthings;
 }
 .rye-regular {
   font-family: "Rye", serif;
   font-weight: 400;
   font-style: normal;
 }
- 
+
 @import "./scss/fontawsome/css/fontawesome.css";
 @import "./scss/fontawsome/css/solid.css";
 @tailwind base;
@@ -25,7 +29,7 @@ p {
 }
 body {
   background-color: black;
-  font-family: Cinzel;
+  font-family: quicksand;
 }
 h2 {
   mix-blend-mode: difference;

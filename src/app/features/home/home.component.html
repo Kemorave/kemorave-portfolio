@@ -1,61 +1,40 @@
-<div class="p-5 size-auto">
-  <section
-    class="relative grid grid-cols-2 h-[100vh] mb-5 late-show-up-animation"
+<section
+  class="relative grid grid-cols-3 h-dvh m-5 mb-10 late-show-up-animation"
+>
+  <div>
+    <p>Hrx</p>
+  </div>
+  <div class="m-auto relative overflow-clip rounded-lg flame-pg w-96 flex flex-col">
+    <img class="absolute z-10 m-5" src="./flame.gif" />
+    <img
+      class="rounded-lg moving-bg  overflow-clip"
+      src="./wizards/00021-527577.png"
+    />
+  </div>
+  <div>
+    <p>Hrx</p>
+  </div>
+</section>
+<section class="flex flex-col size-full">
+  <h2 class="m-5 text-black">Where to find me</h2>
+  <div
+    class="flex flex-wrap items-center content-center self-center gap-5 p-5 justify-items-center"
   >
-    <div
-      class="relative rye-regular grid grid-rows-2 grid-cols-2 min-w-[500px] rounded-lg p-4 items-center justify-center gap-3 w-full group/profImage"
+    <app-shatter-container
+      (onShatter)="openLink(item.url)"
+      *ngFor="let item of whereToFindMeList"
+      class="md:w-[300px] h-[150px] group hover:scale-105 transition-all duration-[1500ms] cursor-pointer w-full rounded-md overflow-clip"
     >
-      <img
-        src="./K.webp"
-        alt="kemorave"
-        class="max-w-[250px] mx-auto active:invert-0 border-2 rounded-lg object-contain group-hover/profImage:invert group-hover/profImage:scale-105 transition-all duration-1000"
-      />
-      <div class="relative flex items-center row-start-2">
-        <div class="absolute w-full bg-white to-zero-size"></div>
-      </div>
-      <p class="text-7xl">Level {{ currentLevel.years }}</p>
-    </div>
-    <div
-      class="relative flex flex-col items-center justify-center w-full gap-3"
-    >
-      <div class="relative flex items-center w-full text-center">
-        <div
-          class="absolute justify-center bg-white size-full to-full-size"
-        ></div>
-        <p
-          class="w-full my-2 text-center text-black uppercase text-7xl shatter-invert-text"
-        >
-          Hi there
-        </p>
-      </div>
-      <p class="w-full my-2 text-3xl font-bold text-black shatter-invert-text">
-        My name is Ibrahim, and I am a software wizard. With over four years of
-        experience specializing in web and mobile spells. I love what I do and I
-        am always looking for new magic to learn.
-      </p>
-    </div>
-  </section>
-  <section class="flex flex-col size-full">
-    <h2 class="m-5 text-black">Where to find me</h2>
-    <div
-      class="flex flex-wrap items-center content-center self-center gap-5 p-5 justify-items-center"
-    >
-      <app-shatter-container
-        (onShatter)="openLink(item.url)"
-        *ngFor="let item of whereToFindMeList"
-        class="md:w-[300px] h-[150px] group hover:scale-105 transition-all duration-[1500ms] cursor-pointer w-full rounded-md overflow-clip"
-      >
-        <div class="relative flex items-center w-full p-5 justify-items-center">
-          <fa-icon size="7x" [icon]="item.icon"></fa-icon>
-          <p class="ml-3 text-2xl font-bold text-black">{{ item.text }}</p>
+      <div class="relative flex items-center w-full p-5 justify-items-center">
+        <fa-icon size="7x" [icon]="item.icon"></fa-icon>
+        <p class="ml-3 text-2xl font-bold text-black">{{ item.text }}</p>
 
-          <fa-icon
-            size="1x"
-            class="absolute top-0 right-0 m-2 transition-colors duration-500 text-black tr group-hover:text-red-600"
-            [icon]="faExternalLink"
-          ></fa-icon>
-        </div>
-      </app-shatter-container>
-    </div>
-  </section>
-</div>
+        <fa-icon
+          size="1x"
+          class="absolute top-0 right-0 m-2 transition-colors duration-500 text-black tr group-hover:text-red-600"
+          [icon]="faExternalLink"
+        ></fa-icon>
+      </div>
+    </app-shatter-container>
+  </div>
+</section>

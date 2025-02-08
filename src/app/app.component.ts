@@ -21,35 +21,23 @@ export class AppComponent implements OnInit {
   id = 'tsparticles';
 
   particlesOptions: IParticlesProps = {
-    background: {
-      color: {
-        value: '#000000',
-      },
-    },
-    smooth: true,
+    
+    smooth: false,
     fpsLimit: 120,
-   
+
     particles: {
       color: {
-        value: '#ffffff',
+        value: '#FFFFFF38',
       },
-      links: {
-        color: '#ffffff',
-        distance: 200,
-        enable: true,
-        opacity: 0.3,
-        width: 10,
-      },
+     
       move: {
-        direction: MoveDirection.bottom,
+        direction: MoveDirection.right,
         enable: true,
         outModes: {
-          default: OutMode.bounce,
+          default: OutMode.out,
         },
         random: true,
-        speed: 5,
-        straight: true,
-
+        speed: 5, 
       },
       number: {
         density: {
@@ -61,16 +49,13 @@ export class AppComponent implements OnInit {
         value: 0.5,
         animation: {
           enable: true,
-          
+
           decay: 0.03,
           count: 10,
           speed: 1.5,
-        }
+        },
       },
-      shape: {
-        type: 'circle',
-
-      },
+     
       size: {
         value: { min: 0.5, max: 3 },
       },
@@ -80,7 +65,6 @@ export class AppComponent implements OnInit {
   constructor(private readonly ngParticlesService: NgParticlesService) {}
 
   ngOnInit(): void {
-     
     this.ngParticlesService.init(async (engine) => {
       console.log(engine);
 
