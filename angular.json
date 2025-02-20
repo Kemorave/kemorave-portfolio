@@ -66,7 +66,15 @@
           },
           "defaultConfiguration": "production"
         },
+
         "serve": {
+          "options": {
+            "ssl": true,
+            "sslCert": "localhost.crt",
+            "sslKey": "localhost-privateKey.key",
+            "host": "localhost","disableHostCheck": true,
+            "port": 443
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
