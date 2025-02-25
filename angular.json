@@ -72,8 +72,10 @@
             "ssl": true,
             "sslCert": "localhost.crt",
             "sslKey": "localhost-privateKey.key",
-            "host": "localhost","disableHostCheck": true,
-            "port": 443
+            "host": "localhost",
+            "disableHostCheck": true,
+            "port": 443,
+            "publicHost": "https://localhost"
           },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
